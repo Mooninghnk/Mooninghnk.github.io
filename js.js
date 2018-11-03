@@ -1,10 +1,6 @@
-var result = 1;
-var counter = 0;
-var number = Number(prompt("number"))
-var pwr = Number(prompt("power"))
-while (counter < pwr) {
-	result = result * number;
-	counter++
-}
-alert(result);
-console.log(result);
+do {
+	var password = prompt("passowrd");
+	var reenter = prompt("re_enter");
+} while(password != reenter);
+
+alert("Password for: created");
