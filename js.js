@@ -3,5 +3,5 @@ function getRandomInt(max) {
 }
 
 let l =  Number(prompt("give me a number to ranzodmize"));
-
+let b = 20;
 alert(getRandomInt(l));
