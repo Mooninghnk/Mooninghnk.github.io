@@ -9,10 +9,6 @@ if(typeof web3 !== "undefined") {
            document.getElementById("balance").innerHTML = "My Balnce = " + balance;
         });
         web3.eth.getPrivate
-
+        ethereum.enable();
     });
-}
-if(typeof window.ethereum !== "undefined") {
-    console.log("connected")
-    
 }
