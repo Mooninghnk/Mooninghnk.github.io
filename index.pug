@@ -1,0 +1,22 @@
+doctype html
+head
+    title Eth App
+body
+    h1 Wallet Status
+    p1(id="address")
+    br
+    p1(id="balance")
+    br
+    h1 Transfers
+    br
+    p1 ToAdreess = 
+    input(type="text", name="To", id="toAdd")
+    br
+    br
+    p1 Amount = 
+    input(type="text", name="Amount", id="much")
+    p1 ETH     
+    button(onclick="sendTo()") transfer
+    script(src="web3.min.js")
+    script(src="web3.js")
+    script(src="js.js")
