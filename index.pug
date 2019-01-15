@@ -3,21 +3,26 @@ head
     title Eth App
 body
     link(rel='stylesheet', href='/css.css')
+    div(class="header")
+        a(id="address" class="Account Adress" href="javascirpt:copyToClipboard_textArea();")
+        a(id="balance" class="Account Balance")
     h1(id="err") Wallet Status
-    p1(id="address")
+    p1(id='addy') active
     br
-    p1(id="balance")
     br
     h1 Transfers
     br
-    p1 ToAdreess = 
+    h3 ToAdreess      
     input(type="text", name="To", id="toAdd")
     br
     br
-    p1 Amount = 
+    h3 Amount        
     input(type="text", name="Amount", id="much")
-    p1 ETH     
-    button(onclick="sendTo()") transfer
+    br
+    p1 ETH  
+    br
+    br   
+    button(class="btn" onclick="sendTo()") transfer
     script(src="web3.min.js")
     script(src="web3.js")
     script(src="js.js")

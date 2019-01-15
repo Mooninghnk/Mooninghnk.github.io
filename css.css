@@ -1,3 +1,48 @@
 body {
-    background-color: gray;
+    background-image: url("download\ \(3\).jpg");
+    background-color: rgba(97, 235, 185, 0.76);
+    text-align: center;
 }
+#addy {
+    background-color: rgb(92, 255, 146);
+    padding: .15em;
+    height: 100px;
+}
+.btn {
+    background-color: aquamarine;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 50px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+
+}
+
+.header {
+    overflow: hidden;
+    background-color: #c1c7c073;
+    padding: 10px 10px;
+    text-align: left;
+    border-radius: 10px;
+}
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+  }
