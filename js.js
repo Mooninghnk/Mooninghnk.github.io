@@ -1,7 +1,7 @@
 if (typeof web3 !== "undefined") {
   web3 = new Web3(web3.currentProvider);
       web3.eth.getAccounts(function(error, result) {
-        document.getElementById("address").innerHTML =
+        document.getElementById("address").value =
           result[0];
         let account1 = result[0];
         web3.eth.getBalance(account1, function(error, result) {
@@ -22,9 +22,8 @@ if (typeof web3 !== "undefined") {
               value: document.getElementById("much").value * 1e18,
             },
             function(error, hash) {
-              console.log(hash);
-            }
-          );
+              document.getElementById("trxHash").innerHTML = "Transaction Hash = " + hash;
+            });
         });
       }
       web3.eth.getAccounts(function(error, result) {
@@ -39,9 +38,12 @@ if (typeof web3 !== "undefined") {
           }, 5000);
         });
       });
-      function copyToClipboard_textArea() {
-        var copyText = document.getElementById("address");
-        copyText.select();
-        document.execCommand("Copy");
+      function copyAddress() {
+        let element = document.getElementById("address");
+        element.select();
+        document.execCommand("copy");
+      }
+      function createAcc() {
+        web3.eth.accounts.create();
       }
 }

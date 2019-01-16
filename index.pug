@@ -5,8 +5,11 @@ body
     link(rel="stylesheet" type="text/css" href="https://legoman8304.github.io/style.css")
     link(rel='stylesheet', href='style.css')
     div(class="header")
-        a(id="address" class="Account Adress" href="javascirpt:copyToClipboard_textArea();")
-        a(id="balance" class="Account Balance")
+        div(class="lock")
+        div(class='cnt')
+            input(type="text" value="x" id="address")
+            a(id="balance" class="Account Balance")
+        button(id="bttn" onclick="copyAddress()") CopyAddress
     h1(id="err") Wallet Status
     p1(id='addy') active
     br
@@ -24,6 +27,12 @@ body
     br
     br   
     button(class="btn" onclick="sendTo()") transfer
+    br
+    br
+    a(id="trxHash")
+    script(type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js")
+    center
+        div(class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="false" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true")
     script(src="web3.min.js")
     script(src="web3.js")
     script(src="js.js")

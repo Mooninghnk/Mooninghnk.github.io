@@ -48,4 +48,35 @@ input[type=text] {
     border: none;
     background-color: #3CBC8D;
     color: white;
+
+}
+.lock {
+    background-color: dimgray;
+    height: 60px;
+    width: 530px;
+    position: absolute;
+    opacity: .1;
+}
+.cnt {
+    display: inline-block;
+
+}
+#address {
+    width: 25.5em;
+}
+#bttn {
+    background-color: aquamarine;
+    color: black;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border-radius: 50px;
+    margin: 8px 0px;
+    border: none;
+    margin-left: 30px;
+}
+#balance {
+    margin-right: 30px;
+}
+.coinmarketcap-currency-widget {
+    background-color: rgba(86, 255, 199, 0.514);
 }
