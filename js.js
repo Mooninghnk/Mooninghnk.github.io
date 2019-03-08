@@ -1,6 +1,6 @@
 //html page
 addMessage(body, "<center><h1 class='msg'></h1></center>");
-addMessage(body, "", "terminal");
+addMessage(body, "<div class='terminal'></div>");
 addMessage(body, "<br>", "");
 addMessage(body, "<center><h3 class='intro'></h3></center>");
 addMessage(body, `<center><div class="xeum-window" style ="display: none;"></div></center>`, "xeum");
@@ -29,10 +29,10 @@ $(document).ready(function () {
     });
 
     $ptty.register('command', {
-        name: `run-xeum`,
+        name: `run-meta`,
         method: function (cmd) {
-            cmd.out = "Xeum";
-            return cmd;
+            cmd.out = "running meta";
+            return window.open("./meta/index.html");
         },
         options: [],
         help: 'runes xeum'
@@ -43,14 +43,14 @@ $(document).ready(function () {
 //end of the html page
 
 
-function colortext() {
 
-}
 //our divs and other elements
 
 let header = selector(".intro");
 
-slowPrint(msgg, "HI My Name Is Nick", 180)
+slowPrint(msgg, "HI My Name Is Nick", 100)
+
 setTimeout(() => {
-    slowPrint(header, `I'am A 17 Year Old JavaScript Developer This terminal is pretty cool, use cd and ls to navigate veiw files, run [-filename] to run one of my projects`, 100)
-}, 5000);
+
+slowPrint(header, `I'am A 17 Year Old JavaScript Developer use this terminal to view my projects type in help to start if you are not expirianced with a terminal use a menu`, 30)
+}, 4000);

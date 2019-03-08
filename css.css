@@ -37,7 +37,10 @@ body {
 	color:wheat;
 }
 
+
+
 .my-theme { 
+	transition: height 0.5s;
 	overflow-X: hidden;
     font-family: "Courier New", Courier, monospace; 
     background-color: #3d31a2;
