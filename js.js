@@ -1,49 +1,56 @@
-if (typeof web3 !== "undefined") {
-  web3 = new Web3(web3.currentProvider);
-      web3.eth.getAccounts(function(error, result) {
-        document.getElementById("address").value =
-          result[0];
-        let account1 = result[0];
-        web3.eth.getBalance(account1, function(error, result) {
-          let balance = result.c[0];
-          document.getElementById("balance").innerHTML = "Balance = " + balance;
-        });
-        ethereum.on("accountsChanged", function(accounts) {
-          window.location.reload();
-        });
-      });
-      function sendTo() {
-        web3.eth.getAccounts(function(error, result) {
-          let account = result[0];
-          web3.eth.sendTransaction(
-            {
-              from: account,
-              to: document.getElementById("toAdd").value,
-              value: document.getElementById("much").value * 1e18,
-            },
-            function(error, hash) {
-              document.getElementById("trxHash").innerHTML = "Transaction Hash = " + hash;
-            });
-        });
-      }
-      web3.eth.getAccounts(function(error, result) {
-        web3.eth.getTransactionCount(result[0], (error, res) => {
-          let count = res;
-          setInterval(() => {
-            web3.eth.getTransactionCount(result[0], function(error, result) {
-              if (count !== result) {
-                window.location.reload();
-              }
-            });
-          }, 5000);
-        });
-      });
-      function copyAddress() {
-        let element = document.getElementById("address");
-        element.select();
-        document.execCommand("copy");
-      }
-      function createAcc() {
-        web3.eth.accounts.create();
-      }
+//html page
+addMessage(body, "<center><h1 class='msg'></h1></center>");
+addMessage(body, "", "terminal");
+addMessage(body, "<br>", "");
+addMessage(body, "<center><h3 class='intro'></h3></center>");
+addMessage(body, `<center><div class="xeum-window" style ="display: none;"></div></center>`, "xeum");
+
+
+
+
+let msgg = selector(".msg");
+$(document).ready(function () {
+    let $ptty = $('.terminal').Ptty({
+        i18n: {
+            welcome: `<center>**** Welcome To The Terminal ****</center>`,
+            error_not_found: `wrong comand type in <p>help<p>`
+        },
+        theme: 'my-theme',
+
+    });
+    $ptty.register('command', {
+        name: 'ls',
+        method: function (cmd) {
+            cmd.out = "xeum | electron| meta | tgbot";
+            return cmd;
+        },
+        options: [],
+        help: 'Lists all my projects'
+    });
+
+    $ptty.register('command', {
+        name: `run-xeum`,
+        method: function (cmd) {
+            cmd.out = "Xeum";
+            return cmd;
+        },
+        options: [],
+        help: 'runes xeum'
+    });
+});
+
+
+//end of the html page
+
+
+function colortext() {
+
 }
+//our divs and other elements
+
+let header = selector(".intro");
+
+slowPrint(msgg, "HI My Name Is Nick", 180)
+setTimeout(() => {
+    slowPrint(header, `I'am A 17 Year Old JavaScript Developer This terminal is pretty cool, use cd and ls to navigate veiw files, run [-filename] to run one of my projects`, 100)
+}, 5000);

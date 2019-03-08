@@ -1,0 +1,63 @@
+body {
+	background-color: #1d1d1d;
+	font-family: FreeMono, monospace;
+	cursor: none;
+}
+
+.curssor {
+	width: 20px;
+	height: 20px;
+	border: 3px solid rgb(91, 49, 160);
+	background-color: blueviolet;
+	position: absolute;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+	animation: crustorAnim .9s infinite alternate;
+	border-radius: 50%;
+}
+@keyframes crustorAnim {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.7);
+	}
+}
+
+.msg:first-letter {
+	background-color: rgb(143, 143, 143);
+}
+
+
+.msg {
+	color: white;
+}
+
+.intro {
+	color:wheat;
+}
+
+.my-theme { 
+	overflow-X: hidden;
+    font-family: "Courier New", Courier, monospace; 
+    background-color: #3d31a2;
+    line-height: 1em;
+    font-size: 1em; 
+	color: transparent; text-shadow: 0 0 0 #ddd;
+	border-radius: 5px;
+	width: 70%;
+	display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+.my-theme .content { padding: 15px 15px 0 15px; }
+.my-theme .prompt { padding: 0 15px 450px 15px; }
+.my-theme .content ul { margin: 0;}
+.my-theme .content ul li { list-style-type: none; }
+.my-theme .loading span::after {
+    content: "⚙";
+    color: #ddd; font-size: 10em;
+    border-radius: 10em; opacity: 0.4;
+}
