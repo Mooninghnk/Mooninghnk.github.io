@@ -1,16 +1,24 @@
 //html page
 addMessage(body, "<center><h1 class='msg'></h1></center>");
 addMessage(body, `<button class="menu"><h1>---</h1></button>`)
+addMessage(body, `
+<div class="xeum-window" style ="display: none;">
+    <p>hello</p>
+</div>
+
+
+`);
 addMessage(body, "<div class='terminal'></div>");
 addMessage(body, "<br>", "");
 addMessage(body, "<center><h3 class='intro'></h3></center>");
-addMessage(body, `<center><div class="xeum-window" style ="display: none;"></div></center>`, "xeum");
 addMessage(body, `<center><button class="xcontent"><h1>👇</h1></button></center>`)
+//addMessage(body, `<a href="#footer">x</a>`)
+addMessage(body, "", "long")
+
 addMessage(body, `
-<center>
 
+<footer id="footer">footer</footer>
 
-</center>
 
 `, "othct")
 
@@ -18,8 +26,10 @@ addMessage(body, `
 
 
 const but = selector(".xcontent");
-
-let msgg = selector(".msg");
+const msgg = selector(".msg");
+const footer = selector("#footer");
+const menu = selector(".menu");
+const xeum_window = selector(".xeum-window")
 
 $(document).ready(function () {
     let $ptty = $('.terminal').Ptty({
@@ -53,9 +63,9 @@ $(document).ready(function () {
 
 
 //end of the html page
-const colorLetter = element => {
+// const colorLetter = element => {
 
-};
+// };
 
 
 //our divs and other elements
@@ -70,4 +80,16 @@ setTimeout(() => {
     slowPrint(header, `I'am A 17 Year Old JavaScript Developer use this terminal to view my projects type in help to start if you are not expirianced with a terminal use a menu`, 30)
 }, 4000);
 
-but.addEventListener('click', () => console.log("hello"));
+
+but.addEventListener('click', () => {
+        window.location.href = "#footer";
+});
+
+menu.addEventListener("click", () => {
+    if (xeum_window.style.display === "none") {
+        xeum_window.style.display = "block";
+      } else {
+        xeum_window.style.display = "none";
+      }
+    //element.classList.remove("xeum-window")
+})

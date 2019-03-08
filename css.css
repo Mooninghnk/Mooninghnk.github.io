@@ -3,6 +3,10 @@ body {
 	font-family: FreeMono, monospace;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 
 .msg::first-letter {
 	background-color: rgb(143, 143, 143);
@@ -48,20 +52,30 @@ body {
 	width: 150px;
 	height: 60px;
 	border-radius: 5%;
-	background-color: rgb(180, 30, 255);
+	background-color: rgb(85, 8, 124);
 }
 
 .xcontent:hover {
 	cursor: pointer;
-	background-color: rgba(180, 30, 255, 0.582);
+	background-color: rgb(85, 8, 124);
 }
-
+.xeum-window {
+	right: 0;
+	width: 60px;
+	height: 70px;
+	border-radius: 10%;
+	background-color: wheat;
+	margin-top: 10px;
+	margin-right: 5px;
+	position: absolute;
+	display: inline-block;
+}
 .menu {
 	border: none;
 	width: 60px;
 	height: 70px;
 	border-radius: 10%;
-	background-color: rgb(180, 30, 255);
+	background-color: rgb(85, 8, 124);
 	margin-top: 10px;
 	margin-right: 5px;
 	position: absolute;
@@ -71,5 +85,12 @@ body {
 
 .menu:hover {
 	cursor: pointer;
-	background-color: rgba(180, 30, 255, 0.582);
+	background-color: rgb(85, 8, 124);
+}
+.long {
+	height: 3000px;
+}
+
+#footer {
+	color: white;
 }
