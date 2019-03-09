@@ -120,11 +120,6 @@ menu.addEventListener("click", () => {
     //element.classList.remove("xeum-window")
 });
 printOut(proj, "MY PROJECTS: {",0, 100 );
+printOut(metaText, "This is one of my first projects, this wallet service is using web3 api for its functionality it supports all sorts of transfers", 0, 50)
 
-meta_wallet.addEventListener("mouseover", () => {
-    if(metaText.innerHTML.length <= 0) {
-    printOut(metaText, "This is one of my first projects, this wallet service is using web3 api for its functionality it supports all sorts of transfers", 0, 50)
-    }
-    else printOut(metaText, "", 0, 100)
-})
 
