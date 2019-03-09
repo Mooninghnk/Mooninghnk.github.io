@@ -1,6 +1,6 @@
 //html page
 addMessage(body, "<center><h1 class='msg'></h1></center>");
-addMessage(body, `<button class="menu"><h1>---</h1></button>`)
+addMessage(body, `<button class="menu" ><h1></h1></button>`)
 addMessage(body, `
 <div class="xeum-window" style ="display: none;">
     <center><p class="welcome-menu">Projects</p></center>
@@ -37,9 +37,9 @@ $(document).ready(function () {
             welcome: `<center>**** Welcome To The Terminal ****</center>`,
             error_not_found: `wrong comand type in <p>help<p>`
         },
-        theme: 'my-theme',
-
+        theme: 'my-theme'
     });
+
     $ptty.register('command', {
         name: 'ls',
         method: function (cmd) {
@@ -59,6 +59,17 @@ $(document).ready(function () {
         options: [],
         help: 'runes xeum'
     });
+
+    $ptty.register('command', {
+        name: `hello`,
+        method: function (cmd) {
+            const xcs  = document.querySelector(".input");
+            cmd.out = "running meta";
+            return slowPrint(xcs, `  I'am A 17 Year Old JavaScript Developer use this terminal to view my projects type in help to start if you are not expirianced with a terminal use a menu press enter and clear to clear this text`, 30)
+        },
+        options: [],
+        help: 'runes xeum'
+    });
 });
 
 
@@ -72,12 +83,13 @@ $(document).ready(function () {
 
 const header = selector(".intro");
 
-
 slowPrint(msgg, "HI My Name Is Nick", 100);
 
-setTimeout(() => {
 
-    slowPrint(header, `I'am A 17 Year Old JavaScript Developer use this terminal to view my projects type in help to start if you are not expirianced with a terminal use a menu`, 30)
+setTimeout(() => {
+    const xcs  = document.querySelector(".input");
+    console.log(xcs)
+   slowPrint(xcs, `type in hello to view my into :)`, 40)
 }, 4000);
 
 
