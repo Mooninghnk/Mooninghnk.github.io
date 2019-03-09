@@ -14,10 +14,11 @@ addMessage(body, "<center><h3 class='intro'></h3></center>");
 addMessage(body, `<center><button class="xcontent"><h1>👇</h1></button></center>`)
 //addMessage(body, `<a href="#footer">x</a>`)
 addMessage(body, "", "long")
-
+addMessage(body, `<center><h1 class="projects">MY PROJECTS</h1></center><br>`)
 addMessage(body, `
 
-<footer id="footer">footer</footer>
+<ul id="footer"><center><p>ERC-20 Token Service</p><img src="./lib/met-gif.gif" class="metaWallet"></center></ul>
+
 
 
 `, "othct")
@@ -82,6 +83,7 @@ $(document).ready(function () {
 //our divs and other elements
 
 const header = selector(".intro");
+const metaTag = selector(".metaWallet");
 
 slowPrint(msgg, "HI My Name Is Nick", 100);
 
@@ -97,6 +99,10 @@ but.addEventListener('click', () => {
         window.location.href = "#footer";
 });
 
+metaTag.addEventListener("click", () => {
+    window.open("https://mooninghnk.github.io/meta/index.html");
+});
+
 menu.addEventListener("click", () => {
     if (xeum_window.style.display === "none") {
         xeum_window.style.display = "block";
@@ -104,4 +110,4 @@ menu.addEventListener("click", () => {
         xeum_window.style.display = "none";
       }
     //element.classList.remove("xeum-window")
-})
+});
