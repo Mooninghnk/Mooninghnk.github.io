@@ -52,6 +52,7 @@ html {
 	width: 150px;
 	height: 60px;
 	border-radius: 5%;
+
 	background-color: rgb(85, 8, 124);
 }
 
@@ -59,12 +60,25 @@ html {
 	cursor: pointer;
 	background-color: rgb(85, 8, 124);
 }
+.welcome-menu {
+	margin: auto;
+	width: 90px;
+	height: 30px;
+	background-color: rgb(137, 43, 226);
+
+}
+
+.welcome-menu:hover {
+
+	cursor: pointer;
+	background-color: rgba(137, 43, 226, 0.61);
+}
+
 .xeum-window {
 	right: 0;
-	width: 60px;
-	height: 70px;
-	border-radius: 10%;
-	background-color: wheat;
+	width: 90px;
+	height: 300px;
+	background-color: rgba(56, 53, 46, 0.678);
 	margin-top: 10px;
 	margin-right: 5px;
 	position: absolute;

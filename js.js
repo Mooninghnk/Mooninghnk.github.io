@@ -3,7 +3,7 @@ addMessage(body, "<center><h1 class='msg'></h1></center>");
 addMessage(body, `<button class="menu"><h1>---</h1></button>`)
 addMessage(body, `
 <div class="xeum-window" style ="display: none;">
-    <p>hello</p>
+    <center><p class="welcome-menu">Projects</p></center>
 </div>
 
 
